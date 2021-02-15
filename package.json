@@ -1,0 +1,23 @@
+{
+  "name": "d3-scatterplot-graph",
+  "version": "1.0.0",
+  "description": "FCC's project",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/risaddex/D3-scatterplot-graph.git"
+  },
+  "keywords": [
+    "D3",
+    "FCC"
+  ],
+  "author": "Danilo Romano",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/risaddex/D3-scatterplot-graph/issues"
+  },
+  "homepage": "https://github.com/risaddex/D3-scatterplot-graph#readme"
+}
