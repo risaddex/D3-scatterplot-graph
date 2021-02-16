@@ -28,14 +28,14 @@ h2 {
 svg {
   background-color: #d4d4d400;
 }
-svg .no-dopping {
-  fill: lime;
+svg .no-doping {
+  fill: rgba(0, 255, 0, 0.904);
 }
-svg .dopping {
-  fill: #fa8b0d;
+svg .doping {
+  fill: #f68709;
 }
 svg circle {
-  stroke: #000;
+  stroke: rgba(0, 0, 0, 0.705);
   stroke-opacity: 0.5;
 }
 
@@ -45,14 +45,39 @@ svg circle {
   align-items: center;
   justify-content: center;
   position: absolute;
-  text-align: center;
-  width: 180px;
-  height: 60px;
+  text-align: justify;
   padding: 5px;
-  background: #45e7fcd8;
   box-shadow: 1px 1px 10px;
   border-radius: 10px;
   pointer-events: none;
+  background-color: #1cb6b6;
+}
+
+#legend {
+  display: flex;
+  position: absolute;
+  right: 10%;
+  top: 30%;
+  flex-direction: column;
+  text-align: justify;
+  padding: 5px;
+}
+#legend p {
+  display: inline-grid;
+  grid-template-columns: 220px 10px;
+  font-size: 0.9em;
+}
+#legend p span {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border: 1px solid black;
+}
+#legend .doping {
+  background-color: #f68709;
+}
+#legend .no-doping {
+  background-color: rgba(0, 255, 0, 0.904);
 }
 
 /*# sourceMappingURL=index.css.map */

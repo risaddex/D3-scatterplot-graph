@@ -56,7 +56,8 @@ d3.json('https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/mas
     .attr('id', 'tooltip')
     .style('opacity', 0);
 
-  //! AXIS CALL
+  //! AXIS CALLS
+
   const mainXaxis = svg
     .append('g')
     .attr("transform", `translate(0,${height - padding})`)
@@ -79,7 +80,7 @@ d3.json('https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/mas
     .attr('cx', (d, i) => xScale(d.Year))
     .attr('cy', (d, i) => yScale(getPlaceHolderDate(d.Time)))
     .attr('r', 6)
-    .attr('class', (d) => d.Doping ? 'dot dopping' : 'dot no-dopping')
+    .attr('class', (d) => d.Doping ? 'dot doping' : 'dot no-doping')
     .attr('data-xvalue', (d, i) => (d.Year))
     .attr('data-yvalue', (d, i) => getPlaceHolderDate(d.Time))
     .on('mouseover', (d) => {
@@ -90,9 +91,18 @@ d3.json('https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/mas
         .attr('data-year', d.Year)
       tooltip
         .html(`
-          Name: ${d.Name}<br />
-          Time: ${d.Time}<br />
-          Year: ${d.Year}<br />
+          <p>
+            <strong>Name</strong>: ${d.Name}<br />
+            <strong>Time</strong>: ${d.Time}<br />
+            <strong>Year</strong>: ${d.Year}<br />
+            ${
+              d.Doping
+                ? `<br />
+                  ${d.Doping}
+                `
+                : ''
+              }
+          </p>
           
         `)
         .style('left', `${d3.event.screenX - padding}px`)
@@ -104,8 +114,6 @@ d3.json('https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/mas
         .duration(200)
         .style('opacity', 0)
     })
-
-
 });
 
 

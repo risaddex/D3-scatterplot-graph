@@ -1,8 +1,8 @@
 // vars
-$primary-color: #45e7fcd8;
+$primary-color: #dcf06dd8;
 $transparent: #d4d4d400;
-$no-dopping: rgb(0, 255, 0);
-$dopping: #fa8b0d;
+$no-doping: rgba(0, 255, 0, 0.904);
+$doping: rgb(246, 135, 9);
 // reset
 html, body {
   margin: 0;
@@ -35,15 +35,17 @@ h2 {
 
 svg {
   background-color: $transparent;
+
+  .no-doping {
+    fill: $no-doping;
+  }
+  .doping {
+    fill: $doping ;
+  }
+
   
-  .no-dopping {
-    fill: $no-dopping;
-  }
-  .dopping {
-    fill: $dopping ;
-  }
   circle {
-    stroke: #000;
+    stroke: rgba(0, 0, 0, 0.705);
     stroke-opacity: 0.5;
   }
 }
@@ -54,12 +56,40 @@ svg {
   align-items: center;
   justify-content: center;
   position: absolute;
-  text-align: center;
-  width: 180px;
-  height: 60px;
+  text-align: justify;
   padding: 5px;
-  background: $primary-color;
   box-shadow: 1px 1px 10px;
   border-radius: 10px;
-  pointer-events: none;
+  pointer-events: none;  
+  background-color: rgb(28, 182, 182);
+}
+
+#legend {
+  display: flex;
+  position: absolute;
+  right: 10%;
+  top: 30%;
+  flex-direction: column;
+  text-align: justify;
+  padding: 5px;
+  
+  p{
+    display: inline-grid;
+    grid-template-columns: 220px 10px;
+    font-size: 0.9em;
+
+    span {
+      display: inline-block;
+      height: 20px;
+      width: 20px;
+      border: 1px solid black;
+    }
+  }
+
+  .doping {
+    background-color: $doping;
+  }
+  .no-doping {
+    background-color: $no-doping;
+  }
 }
