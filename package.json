@@ -19,5 +19,6 @@
   "bugs": {
     "url": "https://github.com/risaddex/D3-scatterplot-graph/issues"
   },
-  "homepage": "https://github.com/risaddex/D3-scatterplot-graph#readme"
+  "homepage": "https://github.com/risaddex/D3-scatterplot-graph#readme",
+  "dependencies": {}
 }

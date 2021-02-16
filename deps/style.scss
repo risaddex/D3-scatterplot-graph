@@ -1,0 +1,65 @@
+// vars
+$primary-color: #45e7fcd8;
+$transparent: #d4d4d400;
+$no-dopping: rgb(0, 255, 0);
+$dopping: #fa8b0d;
+// reset
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+  overflow: hidden;
+}
+
+h2 {
+  display: block;
+  position: absolute;
+  top: 15%;
+  margin: 0 auto;
+}
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(50deg, #b0fafab2, #ffffff);
+
+  .chart-container {
+    padding: 10%;
+    background: $transparent;
+    
+    
+  }
+}
+
+svg {
+  background-color: $transparent;
+  
+  .no-dopping {
+    fill: $no-dopping;
+  }
+  .dopping {
+    fill: $dopping ;
+  }
+  circle {
+    stroke: #000;
+    stroke-opacity: 0.5;
+  }
+}
+
+#tooltip {
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  text-align: center;
+  width: 180px;
+  height: 60px;
+  padding: 5px;
+  background: $primary-color;
+  box-shadow: 1px 1px 10px;
+  border-radius: 10px;
+  pointer-events: none;
+}

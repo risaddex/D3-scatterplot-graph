@@ -1,0 +1,58 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+  overflow: hidden;
+}
+
+h2 {
+  display: block;
+  position: absolute;
+  top: 15%;
+  margin: 0 auto;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(50deg, #b0fafab2, #ffffff);
+}
+.container .chart-container {
+  padding: 10%;
+  background: #d4d4d400;
+}
+
+svg {
+  background-color: #d4d4d400;
+}
+svg .no-dopping {
+  fill: lime;
+}
+svg .dopping {
+  fill: #fa8b0d;
+}
+svg circle {
+  stroke: #000;
+  stroke-opacity: 0.5;
+}
+
+#tooltip {
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  text-align: center;
+  width: 180px;
+  height: 60px;
+  padding: 5px;
+  background: #45e7fcd8;
+  box-shadow: 1px 1px 10px;
+  border-radius: 10px;
+  pointer-events: none;
+}
+
+/*# sourceMappingURL=index.css.map */
